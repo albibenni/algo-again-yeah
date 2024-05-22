@@ -5,7 +5,7 @@ function qs(arr: number[], lo: number, hi: number): void {
     const pivotIdx = partition(arr, lo, hi);
 
     qs(arr, lo, pivotIdx - 1);
-    qs(arr, pivotIdx - 1, hi);
+    qs(arr, pivotIdx + 1, hi);
 }
 
 function partition(arr: number[], lo: number, hi: number): number {
@@ -29,8 +29,5 @@ function partition(arr: number[], lo: number, hi: number): number {
 
 
 export default function quick_sort(arr: number[]): void {
-    const hi = arr.length - 1;
-    const lo = 0;
-
-    qs(arr, lo, hi);
+    qs(arr, 0, arr.length - 1);
 }
