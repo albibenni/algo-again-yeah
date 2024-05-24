@@ -57,3 +57,4 @@ export default function dijkstra_list(source: number, sink: number, arr: Weighte
     out.push(source);
     return out.reverse();
 }   
+
